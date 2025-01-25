@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import Logo from "@/assets/images/logos/Logo.png";
+import Logo from "../../../assets/images/logos/Logo.png";
 import dayjs from "dayjs";
 
 export default function Footer() {
