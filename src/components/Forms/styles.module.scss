@@ -1,0 +1,19 @@
+.root{
+    @apply min-h-svh grid place-items-center bg-blue-500 py-10;
+}
+.questionTitle{
+    @apply lg:text-3xl font-semibold ;  
+}
+
+.container {
+    @apply grid lg:grid-cols-2 gap-8 ;
+    @apply p-8 lg:px-16;
+}
+
+.header {
+    @apply space-y-4 text-center lg:text-left;
+}
+
+.subtitle {
+    @apply text-2xl text-center text-yellow-300 font-semibold uppercase;
+}

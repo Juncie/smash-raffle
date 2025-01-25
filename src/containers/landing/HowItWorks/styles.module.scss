@@ -1,0 +1,53 @@
+.root {
+    @apply py-[120px];
+}
+
+.title {
+    @apply flex items-center justify-center;
+    h2 {
+        @apply text-font32 md:text-font44 font-russo;
+    }
+}
+
+.steps {
+    @apply pt-[60px];
+}
+
+.step {
+    @apply flex flex-col items-center text-center;
+
+    img {
+        @apply h-[75px] w-[75px] mb-4;
+    }
+
+    h6 {
+        @apply text-font18 font-russo;
+    }
+
+    span {
+        @apply text-font16;
+    }
+}
+
+.support {
+}
+
+.coolGuyDiv {
+    @apply relative flex-1;
+    img {
+        @apply h-[200px] md:h-[220px] object-cover;
+        position: absolute;
+        bottom: -24px;
+        right: 0px;
+    }
+}
+
+.clubDiv {
+    @apply relative flex-1;
+    img {
+        position: absolute;
+        height: 150px;
+        top: -24px;
+        right: 0px;
+    }
+}

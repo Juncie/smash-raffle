@@ -1,0 +1,51 @@
+{
+    "name": "bitprime-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbo",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emotion/cache": "^11.11.0",
+        "@emotion/react": "^11.11.3",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.15.12",
+        "@mui/material": "^5.15.10",
+        "@mui/material-nextjs": "^5.15.11",
+        "@next/third-parties": "^14.1.4",
+        "@redux-devtools/extension": "^3.2.6",
+        "@reduxjs/toolkit": "^1.9.7",
+        "autoprefixer": "^10.4.19",
+        "axios": "^1.6.2",
+        "clsx": "^2.1.0",
+        "dayjs": "^1.11.10",
+        "firebase": "^11.2.0",
+        "formik": "^2.4.6",
+        "gsap": "^3.12.2",
+        "lodash": "^4.17.21",
+        "lucide-react": "^0.314.0",
+        "next": "14.2.3",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-icons": "^5.2.1",
+        "react-loader-spinner": "^6.1.6",
+        "react-redux": "^9.1.2",
+        "react-responsive-carousel": "^3.2.23",
+        "react-text-transition": "^3.1.0",
+        "redux": "^4.2.1",
+        "redux-persist": "^6.0.0",
+        "redux-thunk": "^2.4.2",
+        "sass": "^1.69.5",
+        "sonner": "^1.4.41",
+        "stripe": "^16.5.0",
+        "tailwindcss-animate": "^1.0.7",
+        "yup": "^1.6.1"
+    },
+    "devDependencies": {
+        "postcss": "^8",
+        "tailwindcss": "^3.4.1"
+    }
+}

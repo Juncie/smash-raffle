@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 255, 255, 255;
+        --background-end-rgb: 255, 255, 255;
+    }
+}
+
+body {
+    /*in next the target div is __next not root*/
+    background-color: #fff;
+    color: #000;
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: always;
+}
+
+.fade-up {
+    opacity: 0;
+}
+.fade-down {
+    opacity: 0;
+}
+.fade-left {
+    opacity: 0;
+}
+.fade-right {
+    opacity: 0;
+}
+
+.noScrollBar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.noScrollBar::-webkit-scrollbar {
+    display: none;
+}
+
+.v-center {
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(3rem, 2.5385rem + 2.0513vw, 4rem);
+    @apply font-russo;
+}
+
+h2 {
+    font-size: clamp(2.25rem, 1.9231rem + 1.2821vw, 3rem);
+}

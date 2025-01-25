@@ -1,0 +1,35 @@
+.hero{
+    @apply bg-blue-500 min-h-svh flex flex-col justify-center items-center;
+}
+
+.container {
+    @apply pt-[100px] md:pt-[140px] pb-[80px];
+}
+
+.title{
+    color: white;
+}
+
+.description{
+    color: white;
+    padding-block-end: 40px;
+}
+
+.content {
+    @apply grid md:grid-cols-2 text-center md:text-left gap-4;
+
+}
+
+.content_right {
+    @apply flex flex-col gap-4;
+}
+
+.buttonContainer {
+    width: fit-content;
+
+    @screen md {
+        @apply mt-16;
+    }
+}
+
+

@@ -1,0 +1,11 @@
+.root {
+    @apply bg-blue-dark py-12 flex justify-center items-center gap-20;
+
+    @apply overflow-auto;
+    box-shadow: 0px 4.65px 23.23px -1.16px #00000000;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

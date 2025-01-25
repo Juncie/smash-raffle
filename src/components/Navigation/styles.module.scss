@@ -1,0 +1,35 @@
+.navbar {
+    @apply flex items-center justify-center relative;
+    min-height: 82px;
+    box-sizing: border-box;
+}
+
+.leftContainer {
+    position: absolute;
+    left: 0px;
+}
+
+.rightContainer {
+    position: absolute;
+    right: 0px;
+}
+
+.trapezoidButton {
+    @apply text-font16 font-medium;
+    transition: 0.1s all ease-in;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #428bca; /* Adjust color as needed */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    border-radius: 4px;
+}
+
+.trapezoidButton:hover {
+    background: #fcec0c;
+    color: #428bca;
+}

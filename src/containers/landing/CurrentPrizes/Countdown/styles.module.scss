@@ -1,0 +1,17 @@
+.timer {
+    @apply mt-[50px];
+    @apply flex items-center gap-4;
+}
+
+.timerComponent {
+    @apply p-[1px] rounded-[10px] overflow-hidden;
+    background: radial-gradient(80.38% 222.5% at -13.75% -12.36%, #a2a2a2 0%, rgba(191, 193, 193, 0) 100%),
+        radial-gradient(80.69% 208.78% at 108.28% 112.58%, rgba(238, 100, 42, 0.67) 0%, rgba(135, 38, 183, 0) 100%);
+}
+.timerContent {
+    @apply flex items-center justify-center flex-col rounded-[10px];
+    height: 60px;
+    width: 60px;
+    color: #ffb800;
+    background-color: #313233;
+}

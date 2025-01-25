@@ -1,0 +1,22 @@
+.paper {
+    @media (max-width: theme('screens.sm')) {
+        margin: 0;
+        width: calc(100% - 24px);
+    }
+}
+
+.dialogTitle {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid theme('colors.neutral.200');
+}
+
+.actionContainer {
+    @apply border-t border-neutral-200 py-4 px-4;
+    @apply flex justify-end items-center gap-4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+.root {
+    @apply py-[60px] flex flex-col items-center text-center gap-8;
+
+    img {
+        @apply w-[142px];
+    }
+}

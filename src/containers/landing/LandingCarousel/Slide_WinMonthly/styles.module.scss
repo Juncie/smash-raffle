@@ -1,0 +1,71 @@
+.root {
+    @apply flex overflow-hidden relative;
+    @apply px-8 py-10 md:px-10 md:py-20;
+    @apply rounded-[26px];
+    background: linear-gradient(90deg, #2290ff 0.81%, #145699 100%);
+}
+
+.content {
+    @apply text-white relative z-[2];
+    @apply flex flex-col items-start text-left;
+}
+
+.images {
+    @apply relative h-full;
+}
+
+.mainImage {
+    @apply object-contain;
+    height: 697px !important;
+    width: 389px !important;
+    transform: rotate(-5.35deg);
+
+    position: absolute;
+    bottom: -113px;
+    right: -20px;
+
+    @media (max-width: theme('screens.md')) {
+        display: none !important;
+    }
+}
+
+.topImage {
+    @apply object-cover;
+    height: 104px !important;
+    width: 140px !important;
+
+    position: absolute;
+    top: 20px;
+    right: 290px;
+
+    @media (max-width: theme('screens.md')) {
+        display: none !important;
+    }
+}
+.middleImage {
+    @apply object-contain;
+    height: 149.95px !important;
+    width: 206.79px !important;
+    transform: rotate(-1.81deg);
+
+    position: absolute;
+    top: 160px;
+    right: 320px;
+
+    @media (max-width: theme('screens.md')) {
+        display: none !important;
+    }
+}
+.bottomImage {
+    @apply object-contain;
+    height: 196.37px !important;
+    width: 196.37px !important;
+
+    position: absolute;
+    bottom: 20px;
+    right: 260px;
+
+    @media (max-width: theme('screens.md')) {
+        display: none !important;
+    }
+}
