@@ -10,7 +10,11 @@ export default function Footer() {
       <img src={Logo.src} />
       <h3 className="text-font32 font-russo">BE A PLAYER. NOT A SPECTATOR</h3>
       <span className="text-font18 ">
-        @2020-{year} Inrange Smash Golf Play<sup>TM</sup> All right reserved.
+        @2020-{year} Inrange Smash Golf Play
+        <sup>
+          <small>TM</small>
+        </sup>{" "}
+        All right reserved.
       </span>
     </div>
   );

@@ -65,7 +65,7 @@ export default function HowItWorks() {
   return (
     <div className={styles.root}>
       <div className={styles.title}>
-        <h2 className="fade-up">How the Raffle Works</h2>
+        <h2 className="fade-up text-center">How the Raffle Works</h2>
       </div>
       <div className={styles.steps}>
         <Container maxWidth="md">
