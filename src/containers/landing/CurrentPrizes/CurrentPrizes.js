@@ -1,11 +1,15 @@
 "use client";
 import React from "react";
 import styles from "./styles.module.scss";
-import { Container, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Container } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Countdown from "./Countdown/Countdown";
-import { RaffleEnds, RafflePrizes } from "@/utils/data/raffle-prizes";
+
+import Image from "next/image";
+import dayjs from "dayjs";
+import dobsonGiftCard from "@/assets/images/home/prizes/dobson-gc.jpg";
+import badBirdieGiftCard from "@/assets/images/home/prizes/badbirdie-gc.jpg";
 
 export default function CurrentPrizes() {
   const theme = useTheme();
@@ -14,29 +18,38 @@ export default function CurrentPrizes() {
   const month = new Date().toLocaleString("default", { month: "long" });
   const year = new Date().getFullYear();
 
+  const RaffleEnds = new Date(dayjs().endOf("month").date());
+  console.log("end date:", RaffleEnds);
+
+  const RafflePrizes = [
+    {
+      img: dobsonGiftCard,
+      title: "$500 Dobson Gift Card",
+    },
+    {
+      img: badBirdieGiftCard,
+      title: "$500 Bad Birdie Gift Card",
+    },
+  ];
+
   return (
     <div id="prizes" className={styles.root}>
       <h6 className="text-blue-700 font-bold text-font24 md:text-font32 fade-up">
         {month.toUpperCase()} {year}
       </h6>
-      <h4 className="font-russo text-font36 md:text-font44 fade-up text-center">Current Raffle Prizes</h4>
-
-      <Countdown end={RaffleEnds} onEnd={() => console.log("Raffle ended")} />
+      <hgroup className="text-center">
+        <h4 className="font-russo text-font36 md:text-font44 fade-up text-center">Current Raffle Prizes</h4>
+        <p>This month we're giving away a $500 gift card to Bad Birdie and a $500 gift card to Dobson Ranch Golf Course!</p>
+      </hgroup>
+      <Countdown onEnd={() => console.log("Raffle ended")} />
       <Container maxWidth="xl">
-        <div className="mt-[60px]">
-          <ImageList sx={{ overflow: { xs: "hidden", md: "auto" } }} variant="quilted" cols={isMediumScreen ? 1 : 3} gap={8}>
-            {RafflePrizes.map((item, index) => (
-              <ImageListItem key={`prize-${index}-${item.title}`} className="fade-up" cols={item.cols} rows={item.rows}>
-                <img src={item.img} alt={item.title} loading="lazy" />
-                <ImageListItemBar
-                  title={item.title}
-                  subtitle={item.author}
-                  classes={{ actionIcon: "pr-3" }}
-                  actionIcon={item.buttonLabel ? <button>{item.buttonLabel}</button> : <span>{item.value}</span>}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
+        <div class="flex flex-col lg:flex-row lg:px-24  gap-4 justify-center text-center mt-10 lg:mt-20">
+          {RafflePrizes.map((item, index) => (
+            <article key={`prize-${index}-${item.title}`} className="flex flex-col items-center gap-2">
+              <h3 className="text-xl lg:text-2xl">{item.title}</h3>
+              <Image className="rounded" src={item.img} alt={item.title} width={400} height={400} />
+            </article>
+          ))}
         </div>
       </Container>
     </div>

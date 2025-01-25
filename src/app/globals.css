@@ -16,6 +16,13 @@
     }
 }
 
+
+    * {
+        scroll-behavior: smooth;
+    }
+
+
+
 body {
     /*in next the target div is __next not root*/
     background-color: #fff;

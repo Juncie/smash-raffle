@@ -20,7 +20,7 @@ function Hero() {
       <Container className={styles.container}>
         <div className={styles.content}>
           <div className={styles.content_right}>
-            <hgroup className="max-w-lg">
+            <hgroup className="">
               <h1 className={styles.title}>{eventDetails.title}</h1>
               <p className={styles.description}>{eventDetails.description}</p>
               <Button fullWidth variant="contained" color="warning">

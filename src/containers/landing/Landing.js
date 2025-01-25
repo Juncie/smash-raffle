@@ -19,7 +19,7 @@ export default function Landing() {
         {/* <Navigation /> */}
         {/* <LandingCarousel /> */}
         <MultiStepForm />
-        <Partners />
+        {/* <Partners /> */}
         <CurrentPrizes />
         <HowItWorks />
         <Footer />

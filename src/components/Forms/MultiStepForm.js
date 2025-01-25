@@ -95,7 +95,7 @@ const MultiStepForm = () => {
 
   return (
     <section className={styles.root}>
-      <div className="w-48 py-10">
+      <div className="max-w-48 py-10">
         <Image src={sponsorLogo} alt="Bad Birdie x Inrange Smash Golf Play" />
       </div>
       <div className={styles.container}>
@@ -111,31 +111,32 @@ const MultiStepForm = () => {
           </Button>
         </div>
 
-        <Paper className="p-4 rounded grid gap-4">
-          <Stepper className="pt-4" activeStep={step - 1} alternativeLabel sx={{ mb: 4 }}>
-            {Array.from({ length: 6 }).map((_, index) => (
-              <Step key={index}>
-                <StepLabel />
-              </Step>
-            ))}
-          </Stepper>
-          {loading ? <CircularProgress /> : steps[step - 1]}
-
-          <div className="flex gap-4">
-            {step > 1 && (
-              <Button variant="outlined" onClick={handlePrevious}>
-                Previous
-              </Button>
-            )}
-            {step < 6 ? (
-              <Button variant="contained" onClick={handleNext}>
-                Next
-              </Button>
-            ) : (
-              <Button variant="contained" color="primary" type="submit" onClick={formik.handleSubmit}>
-                Submit
-              </Button>
-            )}
+        <Paper className="rounded">
+          <div class="px-8 py-12 grid gap-4">
+            <Stepper className="pt-4" activeStep={step - 1} alternativeLabel sx={{ mb: 4 }}>
+              {Array.from({ length: 6 }).map((_, index) => (
+                <Step key={index}>
+                  <StepLabel />
+                </Step>
+              ))}
+            </Stepper>
+            {loading ? <CircularProgress /> : steps[step - 1]}
+            <div className="flex gap-4">
+              {step > 1 && (
+                <Button variant="outlined" onClick={handlePrevious}>
+                  Previous
+                </Button>
+              )}
+              {step < 6 ? (
+                <Button variant="contained" onClick={handleNext}>
+                  Next
+                </Button>
+              ) : (
+                <Button variant="contained" color="primary" type="submit" onClick={formik.handleSubmit}>
+                  Submit
+                </Button>
+              )}
+            </div>
           </div>
         </Paper>
       </div>
