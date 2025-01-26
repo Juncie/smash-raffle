@@ -22,8 +22,6 @@ const MultiStepForm = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  // console.log("API KEY", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
-
   const formik = useFormik({
     initialValues: {
       first: "",
