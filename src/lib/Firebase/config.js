@@ -5,18 +5,6 @@ import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDUpcto2yVSG5cyFJyFE3N9yCCtizRcBBY",
-//   authDomain: "smash-raffle.firebaseapp.com",
-//   projectId: "smash-raffle",
-//   storageBucket: "process.env?.FIREBASE_STORAGE_BUCKET",
-//   messagingSenderId: "smash-raffle.firebasestorage.app",
-//   appId: "1:699315049713:web:7d784814464811b7a30550",
-//   measurementId: "G-SXXNCC75DDdb",
-// };
-
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -30,8 +18,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-console.log("Firebase App", app);
-
-// const analytics = getAnalytics(app);
+export const analytics = getAnalytics(app);
 
 export const db = getFirestore();
