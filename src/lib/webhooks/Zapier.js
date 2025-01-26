@@ -7,7 +7,11 @@ export const sendToZapier = async (data) => {
     redirect: "follow",
   };
 
-  fetch("https://hooks.zapier.com/hooks/catch/19866727/2kzmod8/", requestOptions)
+  const hookURL = process.env.NEXT_PUBLIC_ZAPIER_URL;
+
+  console.log("Zapier URL", hookURL);
+
+  fetch(hookURL, requestOptions)
     .then((response) => response.text())
     .then((result) => console.log(result))
     .catch((error) => console.error(error));

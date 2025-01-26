@@ -22,6 +22,8 @@ const MultiStepForm = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
 
+  // console.log("API KEY", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+
   const formik = useFormik({
     initialValues: {
       first: "",
@@ -43,7 +45,6 @@ const MultiStepForm = () => {
     validateOnBlur: true,
     onSubmit: async (values) => {
       setLoading(true);
-      console.log("Submitting form", values);
 
       setTimeout(async () => {
         const collectionRef = collection(db, "jan-submissions");
@@ -103,7 +104,7 @@ const MultiStepForm = () => {
         <div className={styles.header}>
           <span className={styles.subtitle}>We're Giving Away $1000 In Prizes</span>
           <hgroup className="text-center lg:text-left pb-2">
-            <h1 className="text-white">Register For The Smash Raffle!</h1>
+            <h1 className="text-white ">Register For The Smash Raffle!</h1>
             <p className="text-white/90">Sign Up to be entered for a chance to win up to $1000 in great prizes!</p>
           </hgroup>
           <Button variant="outlined" color="white" href="#prizes">

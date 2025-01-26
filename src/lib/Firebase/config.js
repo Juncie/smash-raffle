@@ -7,28 +7,30 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDUpcto2yVSG5cyFJyFE3N9yCCtizRcBBY",
-  authDomain: "smash-raffle.firebaseapp.com",
-  projectId: "smash-raffle",
-  storageBucket: "process.env?.FIREBASE_STORAGE_BUCKET",
-  messagingSenderId: "smash-raffle.firebasestorage.app",
-  appId: "1:699315049713:web:7d784814464811b7a30550",
-  measurementId: "G-SXXNCC75DDdb",
-};
-
 // const firebaseConfig = {
-//   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-//   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-//   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-//   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-//   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-//   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-//   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+//   apiKey: "AIzaSyDUpcto2yVSG5cyFJyFE3N9yCCtizRcBBY",
+//   authDomain: "smash-raffle.firebaseapp.com",
+//   projectId: "smash-raffle",
+//   storageBucket: "process.env?.FIREBASE_STORAGE_BUCKET",
+//   messagingSenderId: "smash-raffle.firebasestorage.app",
+//   appId: "1:699315049713:web:7d784814464811b7a30550",
+//   measurementId: "G-SXXNCC75DDdb",
 // };
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+console.log("Firebase App", app);
 
 // const analytics = getAnalytics(app);
 
