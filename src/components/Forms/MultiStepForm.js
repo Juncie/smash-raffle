@@ -98,7 +98,6 @@ const MultiStepForm = () => {
         <Image src={sponsorLogo} alt="Bad Birdie x Inrange Smash Golf Play" />
       </div>
       <div className={styles.container}>
-        {/* {JSON.stringify(formik.values)} */}
         <div className={styles.header}>
           <span className={styles.subtitle}>We're Giving Away $1000 In Prizes</span>
           <hgroup className="text-center lg:text-left pb-2">

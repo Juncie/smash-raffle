@@ -46,12 +46,13 @@ const Step1 = ({ formik, styles }) => {
           error={formik.touched.phone && Boolean(formik.errors.phone)}
           helperText={formik.touched.phone && formik.errors.phone}
         />
-        {/* <FormControlLabel
+        <FormControlLabel
           control={<Checkbox defaultChecked />}
           label="I would like to receive email updates"
           name="optIn"
-          onChange={formik.setFieldValue("optIn", !formikoptIn)}
-        /> */}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
       </Box>
     </>
   );

@@ -45,7 +45,9 @@ export default function CurrentPrizes() {
         <div class="flex flex-col lg:flex-row lg:px-24  gap-4 justify-center text-center mt-10 lg:mt-20">
           {RafflePrizes.map((item, i) => (
             <article key={i} className="flex flex-col items-center gap-2">
-              <h3 className="text-xl lg:text-2xl">{item.title}</h3>
+              <h3 className="text-xl lg:text-2xl uppercase">
+                <strong>{item.title}</strong>
+              </h3>
               <Image className="rounded" src={item.img} alt={item.title} width={400} height={400} />
             </article>
           ))}
